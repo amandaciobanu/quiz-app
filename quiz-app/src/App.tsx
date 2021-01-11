@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
+import {fetchQuizQuestions} from "./API";
 
-//components
-
+//Components
 import QuestionCard from "./components/QuestionCard";
+
+//Types
+import {Difficulty} from "./API";
 
 const TOTAL_QUESTIONS = 10
 
@@ -34,14 +37,14 @@ const App = () => {
       <button className='start' onClick={startTrivia}>Start</button>
 
       <p className='score'>Score: </p>
-      <QuestionCard
+      {/*<QuestionCard
         questionNumber={number + 1}
         totalQuestion={TOTAL_QUESTIONS}
         question={questions[number].question}
         answers={questions[number].answers}
         userAnswer={userAnswers ? userAnswers[number]: undefined}
         callback={checkAnswer}
-      />
+      />*/}
       <button className='next' onClick={nextQuestion}>Next Question</button>
     </div>
   );
