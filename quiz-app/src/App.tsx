@@ -7,7 +7,7 @@ import {Difficulty, fetchQuizQuestions, QuestionState} from "./API";
 import QuestionCard from'./components/QuestionCard'
 
 //Styles
-import {GlobalStyle} from "./App.styles";
+import {GlobalStyle, Wrapper} from "./App.styles";
 
 
 export type AnswerObject ={
@@ -70,8 +70,8 @@ const App = () => {
   return (
       <>
         <GlobalStyle/>
-            <div className="App">
-              <h1>React Quiz</h1>
+            <Wrapper>
+              <h1>Fun Quiz</h1>
 
               { gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
 
@@ -97,7 +97,7 @@ const App = () => {
                   <button className='next' onClick={nextQuestion}>Next Question</button>
               ) : null }
 
-            </div>
+            </Wrapper>
       </>
   );
 }
