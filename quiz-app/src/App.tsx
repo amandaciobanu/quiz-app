@@ -7,10 +7,10 @@ import {Difficulty, fetchQuizQuestions, QuestionState} from "./API";
 import QuestionCard from'./components/QuestionCard'
 
 //Styles
-import {GlobalStyle, Wrapper} from "./App.styles";
+import {GlobalStyle, Wrapper} from "./styles/App.styles";
 
 
-export type AnswerObject ={
+export type AnswerObject = {
     question: string;
     answer: string;
     correct: boolean;
