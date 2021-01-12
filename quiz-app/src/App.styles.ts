@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import BGImage from './images/background-image.jpg';
+import BGImage from './images/bg-image.jpg';
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -35,7 +35,7 @@ export const Wrapper = styled.div`
   }
   h1 {
     font-family: Fascinate Inline;
-    background-image: linear-gradient(180deg, #fff, #87f1ff);
+    background-image: linear-gradient(180deg, #fff, #fd87ff);
     font-weight: 400;
     background-size: 100%;
     background-clip: text;
@@ -50,8 +50,8 @@ export const Wrapper = styled.div`
   }
   .start, .next {
     cursor: pointer;
-    background: linear-gradient(180deg, #ffffff, #ffcc91);
-    border: 2px solid #d38558;
+    background: linear-gradient(180deg, #ffffff, #a291ff);
+    border: 2px solid #5d186f;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     height: 2.5em;
