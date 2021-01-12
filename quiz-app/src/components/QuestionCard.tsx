@@ -1,10 +1,16 @@
 import React from 'react';
 
+//types
+
+import {AnswerObject} from "../App";
+
+//Styles
+
 
 type Props = {
     question: string;
     answers: string[];
-    callback: any;
+    callback: (e: React.MouseEvent<HTMLButtonElement>) => void;
     userAnswer: any;
     questionNumber: number;
     totalQuestion: number;
