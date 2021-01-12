@@ -29,7 +29,7 @@ const App = () => {
 
       const newQuestions = await fetchQuizQuestions(
           TOTAL_QUESTIONS,
-          Difficulty.EASY
+          Difficulty.MEDIUM
       );
       setQuestions(newQuestions);
       setScore(0);
@@ -39,7 +39,18 @@ const App = () => {
   };
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
-
+    if (!gameOver){
+        const answer = e.currentTarget.value;
+        const correct = questions[number].correct_answers === answer;
+        if(correct) setScore(prev => prev + 1);
+        const answerObject = {
+            question: questions[number].question,
+            answer,
+            correct,
+            correctAnswer: questions[number].correct_answers,
+        };
+        setUserAnswers(prev =>[...prev, answerObject])
+    }
   }
 
   const nextQuestion = () => {
